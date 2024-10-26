@@ -1,0 +1,16 @@
+def calculate_tip(total_amount, tip_percentage):  
+    # Переводимо відсотки у десятковий вигляд  
+    tip_decimal = tip_percentage / 100  
+    # Обчислюємо чайові  
+    tip_amount = total_amount * tip_decimal  
+    return tip_amount  
+
+# Введіть ціни та відсотки  
+total_amount = float(input("Введіть загальну суму (в доларах, наприклад, 50.00): $"))  
+tip_percentage = float(input("Введіть відсоток чайових (наприклад, 15): "))  
+
+# Обчислюємо чайові  
+tip_amount = calculate_tip(total_amount, tip_percentage)  
+
+# Виводимо результат  
+print(f"Кількість чайових, які потрібно залишити: ${tip_amount:.2f}")
